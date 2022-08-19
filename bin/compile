@@ -108,16 +108,16 @@ export_env $ENV_DIR APP_NAME
 puts_step "Setting Host Group to $APP_NAME"
 
 puts_step "Running Dynatrace OneAgent installer..."
-echo "sh ${INSTALLER_FILE}" INSTALL_PATH="${BUILD_DIR}" –-set-host-group="${APP_NAME}"
+echo "sh ${INSTALLER_FILE}" INSTALL_PATH="${BUILD_DIR}" --set-host-group="${APP_NAME}"
 #sh -o xtrace "${INSTALLER_FILE}" INSTALL_PATH="${BUILD_DIR}" –-set-host-group="${APP_NAME}"
 echo "try 2"
 #sh -o xtrace "${INSTALLER_FILE}"  –-set-host-group="${APP_NAME}" INSTALL_PATH="${BUILD_DIR}"
 echo "try 3"
 #INSTALL_PATH="${BUILD_DIR}" sh -o xtrace "${INSTALLER_FILE}"  –-set-host-group="${APP_NAME}"
 echo "try 4"
-#sh -o xtrace "${INSTALLER_FILE}" INSTALL_PATH="${BUILD_DIR}"
+sh -o xtrace "${INSTALLER_FILE}" INSTALL_PATH="${BUILD_DIR}"
 echo "try 5"
-sh -o xtrace "${INSTALLER_FILE}" "${BUILD_DIR}" –-set-host-group="${APP_NAME}"
+sh -o xtrace "${INSTALLER_FILE}" "${BUILD_DIR}" --set-host-group="${APP_NAME}"
 
 
 # Set procfile
