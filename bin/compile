@@ -115,8 +115,10 @@ echo "try 2"
 echo "try 3"
 #INSTALL_PATH="${BUILD_DIR}" sh -o xtrace "${INSTALLER_FILE}"  –-set-host-group="${APP_NAME}"
 echo "try 4"
-sh -o xtrace "${INSTALLER_FILE}" INSTALL_PATH="${BUILD_DIR}"
+#sh -o xtrace "${INSTALLER_FILE}" INSTALL_PATH="${BUILD_DIR}"
 echo "try 5"
+sh -o xtrace "${INSTALLER_FILE}" "${BUILD_DIR}"
+echo "try 6"
 sh -o xtrace "${INSTALLER_FILE}" "${BUILD_DIR}" --set-host-group="${APP_NAME}"
 
 
