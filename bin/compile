@@ -106,10 +106,11 @@ set -e
 # Export APP_NAME from environment variables
 export_env $ENV_DIR APP_NAME
 puts_step "Setting Host Group to $APP_NAME"
+cat $INSTALLER_FILE
 
 puts_step "Running Dynatrace OneAgent installer..."
 echo "sh ${INSTALLER_FILE}" –-set-host-group="${APP_NAME}" INSTALL_PATH="${BUILD_DIR}"
-sh "${INSTALLER_FILE}" –-set-host-group=$APP_NAME "${BUILD_DIR}"
+sh "${INSTALLER_FILE}" "${BUILD_DIR}" –-set-host-group="${$APP_NAME}"
 
 # Set procfile
 puts_step "Configuring Dynatrace Oneagent..."
