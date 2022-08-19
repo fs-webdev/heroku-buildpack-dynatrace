@@ -110,7 +110,7 @@ cat $INSTALLER_FILE
 
 puts_step "Running Dynatrace OneAgent installer..."
 echo "sh ${INSTALLER_FILE}" –-set-host-group="${APP_NAME}" INSTALL_PATH="${BUILD_DIR}"
-sh "${INSTALLER_FILE}" "${BUILD_DIR}" –-set-host-group="${$APP_NAME}"
+sh -o xtrace "${INSTALLER_FILE}" "${BUILD_DIR}" –-set-host-group="${$APP_NAME}"
 
 # Set procfile
 puts_step "Configuring Dynatrace Oneagent..."
