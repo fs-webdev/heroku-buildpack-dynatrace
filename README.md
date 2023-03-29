@@ -1,3 +1,5 @@
+# WARNING: This was a failed experiment, DO NOT USE, it will be archived soon once we extract our learnings
+
 # Heroku Dynatrace Buildpack
 
 The Heroku buildpack for Dynatrace OneAgent enables cloud-native monitoring of your Heroku application by integrating Dynatrace OneAgent into your application’s slug and dyno.
